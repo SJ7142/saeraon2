@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SAERAON - BUSINESS</title>
+    <link rel="shortcut icon" href="./images/favicon/favicon.ico" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/business.css" />
+    <link rel="stylesheet" href="./css/business_res.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./css/headFoot.css" />
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="./js/jquery-3.6.0.min.js" defer></script>
+    <script src="./js/nav.js" defer></script>
+    <script src="./js/module.js" defer></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-K15803878K"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        window.dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
+
+      gtag('config', 'G-K15803878K')
+    </script>
+    <style>
+      .swiper {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+
+      @media all and (max-width: 767px) {
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+
+      .swiper::before {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: 50%;
+        background: rgba(0, 0, 0, 0.4);
+        z-index: 99;
+      }
+
+      @media all and (max-width: 767px) {
+        .swiper::before {
+          content: none;
+        }
+      }
+
+      .swiper.reverse-slide::before {
+        left: 0;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="header-scroll"><div class="header-nav">
+      <div class="header-logo logo-scroll"><a href="./index.html"></a></div>
+      <ul>
+        <li><a href="./saeraon.html" class="" style="color: black;">SAERAON</a></li>
+        <li><a href="./business.html" style="color: black;">BUSINESS</a></li>
+        <li><a href="./announce.html" style="color: black;">ANNOUNCE</a></li>
+        <li><a href="./careers.html" style="color: black;">CAREERS</a></li>
+        <li><a href="./contact.html" style="color: black;">CONTACT</a></li>
+        <li><a href="./audition.html" style="color: black;">AUDITION</a></li>
+        <li class="lang">
+          <ul class="lang-border">
+            <li class="after"><a href="/index.html" style="color: black;">KR</a></li>
+            <li><a href="/en/" style="color: black;">EN</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="mobile-ham">
+        <div class="ham-btn">
+          <span style="border-bottom: 1.5px solid black;"></span>
+          <span style="border-bottom: 1.5px solid black;"></span>
+          <span style="border-bottom: 1.5px solid black;"></span>
+        </div>
+      </div>
+    </div>
+    
+    <nav id="mobile-nav">
+      <ul>
+        <li><a href="./saeraon.html">SAERAON</a></li>
+        <li><a href="./business.html">BUSINESS</a></li>
+        <li><a href="./announce.html">ANNOUNCE</a></li>
+        <li><a href="./careers.html">CAREERS</a></li>
+        <li><a href="./contact.html">CONTACT</a></li>
+        <li><a href="./audition.html">AUDITION</a></li>
+      </ul>
+      <ul class="mb-lang">
+        <li><a href="/index.html">KR</a></li>
+        <li><a href="/en/">EN</a></li>
+      </ul>
+    </nav>
+    
+    <script>
+      $(document).ready(function () {
+        // header scroll event
+        $(window).scroll(function () {
+          if ($(window).scrollTop() >= 50) {
+            $("header").addClass("header-scroll");
+            $(".header-nav li > a").css("color", "black");
+            $(".header-logo").addClass("logo-scroll");
+            $(".ham-btn > span").css("border-bottom", "1.5px solid black");
+            $(".lang li:first-child").addClass("after");
+            $(".lang > ul").addClass("lang-border");
+          } else {
+            $("header").removeClass("header-scroll");
+            $(".header-nav li > a").css("color", "white");
+            $(".header-logo").removeClass("logo-scroll");
+            $(".ham-btn > span").css("border-bottom", "1.5px solid white");
+            $(".lang li:first-child").removeClass("after");
+            $(".lang > ul").removeClass("lang-border");
+          }
+          $(".header-nav li > a").hover(
+            function () {
+              if ($(window).scrollTop() >= 50) {
+                $(this).addClass("after");
+              } else {
+                $(this).removeClass("after");
+              }
+            },
+            function () {
+              $(this).removeClass("after");
+            }
+          );
+        });
+    
+        // Mobile Nav
+        $(".ham-btn").click(function () {
+          $(this).toggleClass("active");
+          if ($(".ham-btn").hasClass("active")) {
+            $("header").addClass("header-scroll");
+            $(".header-logo").addClass("logo-scroll");
+            $(".ham-btn > span").css("border-bottom", "1.5px solid black");
+            $("#mobile-nav").stop().animate(
+              {
+                right: 0,
+              },
+              500
+            );
+            $("body").addClass("body-scroll");
+          } else {
+            $("header").removeClass("header-scroll");
+            $(".header-logo").removeClass("logo-scroll");
+            $(".ham-btn > span").css("border-bottom", "1.5px solid white");
+            $("#mobile-nav").stop().animate(
+              {
+                right: "-100%",
+              },
+              500
+            );
+            $("body").removeClass("body-scroll");
+          }
+        });
+      });
+    </script>
+    </header>
+
+    <div class="wrap">
+      <div class="main-banner">
+        <img
+          class="bg-banner-img"
+          src="./images/business/business_banner.jpeg"
+          alt=""
+        />
+        <img
+          class="banner-icon"
+          src="./images/business/icon_saraon_large.png"
+          alt=""
+        />
+        <div class="container">
+          <div class="contents">
+            <h1 lang="en">BUSINESS</h1>
+            <p>
+              우리는 <br class="mobile-d-none" />
+              한차원 높은 생각과 전략으로 <br class="mobile-d-none" />
+              새로운 가치와 즐거움을 선사합니다
+            </p>
+          </div>
+        </div>
+      </div>
+      <section id="businessItr" class="container">
+        <h2 class="title">사업소개</h2>
+        <div class="contents">
+          <div class="wrap-content-header">
+            <h3 class="inner-container">소프트웨어 개발</h3>
+            <ul id="devBtns" class="left-spacing">
+              <li>
+                <button class="on" data-btn-dev="0">기획 / 디자인</button>
+              </li>
+              <li>
+                <button data-btn-dev="1">Web / App 개발</button>
+              </li>
+              <li>
+                <button data-btn-dev="2">시스템 유지 / 보수</button>
+              </li>
+            </ul>
+          </div>
+          <div class="wrap-slide">
+            <p>
+              <strong>
+                새라온은 고객의 생각보다 <br />
+                앞서 <span>불</span>을 밝히겠습니다.
+              </strong>
+            </p>
+            <div id="firSwiper" class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img
+                    src="./images/business/software_01.jpeg"
+                    alt="새라온 소프트웨어 이미지1"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./images/business/software_02.svg"
+                    alt="새라온 소프트웨어 이미지2"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./images/business/software_03.jpeg"
+                    alt="새라온 소프트웨어 이미지3"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contents">
+          <div class="wrap-content-header">
+            <h3 class="inner-container">매니지먼트</h3>
+            <ul class="left-spacing">
+              <li>
+                <button class="on" data-btn-manage="2">
+                  아티스트 발굴 및 육성
+                </button>
+              </li>
+              <li>
+                <button data-btn-manage="1">콘텐츠 기획 및 제작</button>
+              </li>
+              <li>
+                <button data-btn-manage="0">
+                  글로벌 엔터테인먼트 비즈니스
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div class="wrap-slide slide-right">
+            <p class="reverse-slide">
+              <strong>
+                새라온은 아티스트와 <br />
+                함께 <span>성장</span>합니다.
+              </strong>
+            </p>
+            <div id="secSwiper" class="swiper reverse-slide">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img
+                    src="./images/business/management_01.jpeg"
+                    alt="새라온 매니지먼트 이미지1"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./images/business/management_02.jpeg"
+                    alt="새라온 매니지먼트 이미지2"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./images/business/management_03.jpeg"
+                    alt="새라온 매니지먼트 이미지3"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contents">
+          <div class="wrap-content-header">
+            <h3 class="inner-container">음반 제작 유통</h3>
+            <ul class="left-spacing">
+              <li>
+                <button class="on" data-btn-music="0">음반 제작 및 유통</button>
+              </li>
+              <li>
+                <button data-btn-music="1">레코딩 스튜디오</button>
+              </li>
+              <li>
+                <button data-btn-music="2">저작권관리</button>
+              </li>
+            </ul>
+          </div>
+          <div class="wrap-slide">
+            <p>
+              <strong>
+                새라온은 펼치지 않은 <br />
+                아티스트의 꿈을 <span>ON</span>합니다.
+              </strong>
+            </p>
+            <div id="thrSwiper" class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img
+                    src="./images/business/music_01.jpeg"
+                    alt="새라온 음악 이미지1"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./images/business/music_02.jpeg"
+                    alt="새라온 음악 이미지2"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./images/business/music_03.jpeg"
+                    alt="새라온 음악 이미지3"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div class="footer-center">
+          <div class="footer-content-left">
+            <h1 class="footer-logo">
+              <a href="index.html"><img src="images/common/footerLogo.svg" alt="새라온이앤티 로고"></a>
+            </h1>
+      
+            <div class="copyright">
+              <p>Copyright 2021 새라온이앤티, All rights reserved.</p>
+              <p><a href="#void">[개인정보취급방침]</a></p>
+            </div>
+          </div>
+      
+          <div class="footer-content-right">
+            <div class="tel-info">
+              <p>SAERAON OFFICE</p>
+              <p>T: 02-6975-9905</p>
+              <p>F: 070-7008-9999</p>
+            </div>
+      
+            <address>
+              <p>서울시 강남구 언주로 536 태승빌딩 5F</p>
+              <p>Taeseoung Bldg, Eonji-ro, Gangnam-gu, Seoul, KR</p>
+            </address>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script>
+      let reloadTrigger = window.outerWidth < 767 ? 0 : 1
+      let preWidth = window.outerWidth
+
+      window.addEventListener('resize', () => {
+        if (preWidth < 768 && window.outerWidth > 767) {
+          location.reload()
+        }
+        if (preWidth > 767 && window.outerWidth < 768) {
+          console.log('this is small')
+          location.reload()
+        }
+
+        if (window.outerWidth === 767) {
+        }
+      })
+
+      let slidePerView = 2
+      if (window.outerWidth < 768) slidePerView = 1
+      var bullet = ['1번', '2번', '3번']
+      var swiper = new Swiper('#firSwiper', {
+        slidesPerView: slidePerView,
+        spaceBetween: 0,
+        loop: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        renderBullet: function (index, className) {
+          return `${idnex}, ${className}`
+        },
+      })
+      swiper.slideTo(0)
+      swiper.on('slideChange', (e) => {
+        let pageNumber = e.realIndex
+
+        if (window.outerWidth > 767) {
+          if (pageNumber === 0) {
+            pageNumber = 2
+          } else {
+            pageNumber -= 1
+          }
+        } else {
+          if (pageNumber === 2) {
+            pageNumber = 0
+          } else if (pageNumber === 0) {
+            pageNumber = 1
+          } else {
+            pageNumber = 2
+          }
+        }
+
+        document.querySelectorAll('[data-btn-dev]').forEach((item) => {
+          item.className = ''
+        })
+        document.querySelector(
+          '[data-btn-dev="' + pageNumber + '"]'
+        ).className = 'on'
+      })
+
+      if (window.outerWidth < 768) {
+        swiper.slidesPerView = 1
+      }
+
+      document.querySelectorAll('[data-btn-dev]').forEach((item) => {
+        item.addEventListener('click', (e) => {
+          let pageNumber = e.target.dataset.btnDev
+
+          swiper.slideTo(pageNumber)
+        })
+      })
+
+      var swiper2 = new Swiper('#secSwiper', {
+        slidesPerView: slidePerView,
+        spaceBetween: 0,
+        loop: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+          reverseDirection: true,
+        },
+      })
+      swiper2.on('slideChange', (e) => {
+        let pageNumber = e.realIndex
+
+        if (window.outerWidth > 767) {
+          if (pageNumber === 0) {
+            pageNumber = 2
+          } else {
+            pageNumber -= 1
+          }
+        } else {
+          if (pageNumber === 2) {
+            pageNumber = 0
+          } else if (pageNumber === 0) {
+            pageNumber = 1
+          } else {
+            pageNumber = 2
+          }
+        }
+
+        document.querySelectorAll('[data-btn-manage]').forEach((item) => {
+          item.className = ''
+        })
+        document.querySelector(
+          '[data-btn-manage="' + pageNumber + '"]'
+        ).className = 'on'
+      })
+
+      document.querySelectorAll('[data-btn-manage]').forEach((item) => {
+        item.addEventListener('click', (e) => {
+          swiper2.slideTo(e.target.dataset.btnManage)
+        })
+      })
+
+      var swiper3 = new Swiper('#thrSwiper', {
+        slidesPerView: slidePerView,
+        spaceBetween: 0,
+        loop: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+      })
+
+      swiper3.slideTo(0)
+      swiper3.on('slideChange', (e) => {
+        let pageNumber = e.realIndex
+
+        if (window.outerWidth > 767) {
+          if (pageNumber === 0) {
+            pageNumber = 2
+          } else {
+            pageNumber -= 1
+          }
+        } else {
+          if (pageNumber === 2) {
+            pageNumber = 0
+          } else if (pageNumber === 0) {
+            pageNumber = 1
+          } else {
+            pageNumber = 2
+          }
+        }
+
+        document.querySelectorAll('[data-btn-music]').forEach((item) => {
+          item.className = ''
+        })
+        document.querySelector(
+          '[data-btn-music="' + pageNumber + '"]'
+        ).className = 'on'
+      })
+
+      document.querySelectorAll('[data-btn-music]').forEach((item) => {
+        item.addEventListener('click', (e) => {
+          swiper3.slideTo(e.target.dataset.btnMusic)
+        })
+      })
+    </script>
+  </body>
+</html>

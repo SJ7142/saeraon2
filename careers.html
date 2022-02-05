@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-K15803878K"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        window.dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
+
+      gtag('config', 'G-K15803878K')
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SAERAON - CAREERS</title>
+    <link rel="shortcut icon" href="./images/favicon/favicon.ico" />
+    <link rel="stylesheet" href="./css/careers.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/headFoot.css" />
+    <link rel="stylesheet" href="./css/titleBg.css" />
+    <script src="./js/jquery-3.6.0.min.js" defer></script>
+    <script src="./js/nav.js" defer></script>
+    <script src="./js/module.js" defer></script>
+    <script src="./js/career.js" defer></script>
+  </head>
+  <body>
+    <header class="header-scroll"><div class="header-nav">
+      <div class="header-logo logo-scroll"><a href="./index.html"></a></div>
+      <ul>
+        <li><a href="./saeraon.html" class="" style="color: black;">SAERAON</a></li>
+        <li><a href="./business.html" style="color: black;">BUSINESS</a></li>
+        <li><a href="./announce.html" style="color: black;">ANNOUNCE</a></li>
+        <li><a href="./careers.html" style="color: black;">CAREERS</a></li>
+        <li><a href="./contact.html" style="color: black;">CONTACT</a></li>
+        <li><a href="./audition.html" style="color: black;">AUDITION</a></li>
+        <li class="lang">
+          <ul class="lang-border">
+            <li class="after"><a href="/index.html" style="color: black;">KR</a></li>
+            <li><a href="/en/" style="color: black;">EN</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="mobile-ham">
+        <div class="ham-btn">
+          <span style="border-bottom: 1.5px solid black;"></span>
+          <span style="border-bottom: 1.5px solid black;"></span>
+          <span style="border-bottom: 1.5px solid black;"></span>
+        </div>
+      </div>
+    </div>
+    
+    <nav id="mobile-nav">
+      <ul>
+        <li><a href="./saeraon.html">SAERAON</a></li>
+        <li><a href="./business.html">BUSINESS</a></li>
+        <li><a href="./announce.html">ANNOUNCE</a></li>
+        <li><a href="./careers.html">CAREERS</a></li>
+        <li><a href="./contact.html">CONTACT</a></li>
+        <li><a href="./audition.html">AUDITION</a></li>
+      </ul>
+      <ul class="mb-lang">
+        <li><a href="/index.html">KR</a></li>
+        <li><a href="/en/">EN</a></li>
+      </ul>
+    </nav>
+    
+    <script>
+      $(document).ready(function () {
+        // header scroll event
+        $(window).scroll(function () {
+          if ($(window).scrollTop() >= 50) {
+            $("header").addClass("header-scroll");
+            $(".header-nav li > a").css("color", "black");
+            $(".header-logo").addClass("logo-scroll");
+            $(".ham-btn > span").css("border-bottom", "1.5px solid black");
+            $(".lang li:first-child").addClass("after");
+            $(".lang > ul").addClass("lang-border");
+          } else {
+            $("header").removeClass("header-scroll");
+            $(".header-nav li > a").css("color", "white");
+            $(".header-logo").removeClass("logo-scroll");
+            $(".ham-btn > span").css("border-bottom", "1.5px solid white");
+            $(".lang li:first-child").removeClass("after");
+            $(".lang > ul").removeClass("lang-border");
+          }
+          $(".header-nav li > a").hover(
+            function () {
+              if ($(window).scrollTop() >= 50) {
+                $(this).addClass("after");
+              } else {
+                $(this).removeClass("after");
+              }
+            },
+            function () {
+              $(this).removeClass("after");
+            }
+          );
+        });
+    
+        // Mobile Nav
+        $(".ham-btn").click(function () {
+          $(this).toggleClass("active");
+          if ($(".ham-btn").hasClass("active")) {
+            $("header").addClass("header-scroll");
+            $(".header-logo").addClass("logo-scroll");
+            $(".ham-btn > span").css("border-bottom", "1.5px solid black");
+            $("#mobile-nav").stop().animate(
+              {
+                right: 0,
+              },
+              500
+            );
+            $("body").addClass("body-scroll");
+          } else {
+            $("header").removeClass("header-scroll");
+            $(".header-logo").removeClass("logo-scroll");
+            $(".ham-btn > span").css("border-bottom", "1.5px solid white");
+            $("#mobile-nav").stop().animate(
+              {
+                right: "-100%",
+              },
+              500
+            );
+            $("body").removeClass("body-scroll");
+          }
+        });
+      });
+    </script>
+    </header>
+
+    <div class="title-banner-wrap">
+      <div class="banner-bg"></div>
+      <div class="banner-content">
+        <h1>CAREERS</h1>
+        <p class="banner-title">
+          즐거움에 대한 깊이 있는 열정과 생각을 가진 인재를 기다리고 있습니다.
+        </p>
+        <p class="banner-text">
+          우리는 즐거움에 대한 깊이 있는 열정과 생각으로<br />
+          문화,예술 그리고 IT 분야에 새로운 가치와 방향성을 제시합니다.
+        </p>
+      </div>
+    </div>
+
+    <section class="recruit-wrap">
+      <div class="center">
+        <div class="recruit-content-wrap">
+          <div class="content-box-left">
+            <h2>saeraon recruit</h2>
+            <div class="box-left-text">
+              <p>
+                WE<br />
+                ARE<br />
+                SAERAON
+              </p>
+            </div>
+          </div>
+          <div class="content-box-right">
+            <ul class="recruit-box-wrap">
+              <li>
+                <div class="recruit-status">
+                  <p>상시</p>
+                </div>
+                <div class="recruit-content">
+                  <a href="https://www.jobkorea.co.kr/Recruit/GI_Read/36705274?Oem_Code=C1&logpath=1" target="_blank">
+                    [정규직] (경력) / 비서직<br />
+                    2021.11.30 ~ 2022.01.29
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div class="recruit-status">
+                  <p>상시</p>
+                </div>
+                <div class="recruit-content">
+                  <a href="https://www.jobkorea.co.kr/Recruit/GI_Read/36705228?Oem_Code=C1&logpath=1" target="_blank">
+                    [정규직] (신입&#183;경력) / 개발직(FE/BE/CE/기획)<br />
+                    2021.11.30 ~ 2022.01.29 
+                  </a>
+                </div>
+              </li>
+              <li> 
+                <div class="recruit-status">
+                  <p>상시</p>
+                </div>
+                <div class="recruit-content">
+                  <a href="https://www.jobkorea.co.kr/Recruit/GI_Read/36576733?Oem_Code=C1&logpath=1" target="_blank">
+                    [정규직] (경력) / A&R(Artists and Repertoire)<br />
+                    2021.11.17 ~ 2021.12.31
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div class="recruit-status">
+                  <p>상시</p>
+                </div>
+                <div class="recruit-content">
+                  <a href="https://www.jobkorea.co.kr/Recruit/GI_Read/36576683?Oem_Code=C1&logpath=1" target="_blank">
+                    [정규직] (경력) / 콘텐츠 에디터<br />
+                    2021.11.17 ~ 2021.12.31
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div class="recruit-status">
+                  <p>상시</p>
+                </div>
+                <div class="recruit-content">
+                  <a href="https://www.jobkorea.co.kr/Recruit/GI_Read/36576665?Oem_Code=C1&logpath=1" target="_blank">
+                    [정규직] (경력) / 마케팅 및 CS<br />
+                    2021.11.17 ~ 2021.12.31
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-center">
+        <div class="footer-content-left">
+          <h1 class="footer-logo">
+            <a href="index.html"><img src="images/common/footerLogo.svg" alt="새라온이앤티 로고"></a>
+          </h1>
+    
+          <div class="copyright">
+            <p>Copyright 2021 새라온이앤티, All rights reserved.</p>
+            <p><a href="#void">[개인정보취급방침]</a></p>
+          </div>
+        </div>
+    
+        <div class="footer-content-right">
+          <div class="tel-info">
+            <p>SAERAON OFFICE</p>
+            <p>T: 02-6975-9905</p>
+            <p>F: 070-7008-9999</p>
+          </div>
+    
+          <address>
+            <p>서울시 강남구 언주로 536 태승빌딩 5F</p>
+            <p>Taeseoung Bldg, Eonji-ro, Gangnam-gu, Seoul, KR</p>
+          </address>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

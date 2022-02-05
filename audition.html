@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-K15803878K"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        window.dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
+
+      gtag('config', 'G-K15803878K')
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SAERAON - AUDITION</title>
+    <link rel="shortcut icon" href="./images/favicon/favicon.ico" />
+    <link rel="stylesheet" href="./css/audition.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/headFoot.css" />
+    <link rel="stylesheet" href="./css/titleBg.css" />
+    <script src="./js/jquery-3.6.0.min.js" defer></script>
+    <script src="./js/nav.js" defer></script>
+    <script src="./js/module.js" defer></script>
+  </head>
+  <body>
+    <header class="header-scroll"><div class="header-nav">
+      <div class="header-logo logo-scroll"><a href="./index.html"></a></div>
+      <ul>
+        <li><a href="./saeraon.html" class="" style="color: black;">SAERAON</a></li>
+        <li><a href="./business.html" style="color: black;">BUSINESS</a></li>
+        <li><a href="./announce.html" style="color: black;">ANNOUNCE</a></li>
+        <li><a href="./careers.html" style="color: black;">CAREERS</a></li>
+        <li><a href="./contact.html" style="color: black;">CONTACT</a></li>
+        <li><a href="./audition.html" style="color: black;">AUDITION</a></li>
+        <li class="lang">
+          <ul class="lang-border">
+            <li class="after"><a href="/index.html" style="color: black;">KR</a></li>
+            <li><a href="/en/" style="color: black;">EN</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="mobile-ham">
+        <div class="ham-btn">
+          <span style="border-bottom: 1.5px solid black;"></span>
+          <span style="border-bottom: 1.5px solid black;"></span>
+          <span style="border-bottom: 1.5px solid black;"></span>
+        </div>
+      </div>
+    </div>
+    
+    <nav id="mobile-nav">
+      <ul>
+        <li><a href="./saeraon.html">SAERAON</a></li>
+        <li><a href="./business.html">BUSINESS</a></li>
+        <li><a href="./announce.html">ANNOUNCE</a></li>
+        <li><a href="./careers.html">CAREERS</a></li>
+        <li><a href="./contact.html">CONTACT</a></li>
+        <li><a href="./audition.html">AUDITION</a></li>
+      </ul>
+      <ul class="mb-lang">
+        <li><a href="/index.html">KR</a></li>
+        <li><a href="/en/">EN</a></li>
+      </ul>
+    </nav>
+    
+    <script>
+      $(document).ready(function () {
+        // header scroll event
+        $(window).scroll(function () {
+          if ($(window).scrollTop() >= 50) {
+            $("header").addClass("header-scroll");
+            $(".header-nav li > a").css("color", "black");
+            $(".header-logo").addClass("logo-scroll");
+            $(".ham-btn > span").css("border-bottom", "1.5px solid black");
+            $(".lang li:first-child").addClass("after");
+            $(".lang > ul").addClass("lang-border");
+          } else {
+            $("header").removeClass("header-scroll");
+            $(".header-nav li > a").css("color", "white");
+            $(".header-logo").removeClass("logo-scroll");
+            $(".ham-btn > span").css("border-bottom", "1.5px solid white");
+            $(".lang li:first-child").removeClass("after");
+            $(".lang > ul").removeClass("lang-border");
+          }
+          $(".header-nav li > a").hover(
+            function () {
+              if ($(window).scrollTop() >= 50) {
+                $(this).addClass("after");
+              } else {
+                $(this).removeClass("after");
+              }
+            },
+            function () {
+              $(this).removeClass("after");
+            }
+          );
+        });
+    
+        // Mobile Nav
+        $(".ham-btn").click(function () {
+          $(this).toggleClass("active");
+          if ($(".ham-btn").hasClass("active")) {
+            $("header").addClass("header-scroll");
+            $(".header-logo").addClass("logo-scroll");
+            $(".ham-btn > span").css("border-bottom", "1.5px solid black");
+            $("#mobile-nav").stop().animate(
+              {
+                right: 0,
+              },
+              500
+            );
+            $("body").addClass("body-scroll");
+          } else {
+            $("header").removeClass("header-scroll");
+            $(".header-logo").removeClass("logo-scroll");
+            $(".ham-btn > span").css("border-bottom", "1.5px solid white");
+            $("#mobile-nav").stop().animate(
+              {
+                right: "-100%",
+              },
+              500
+            );
+            $("body").removeClass("body-scroll");
+          }
+        });
+      });
+    </script>
+    </header>
+
+    <div class="title-banner-wrap">
+      <div class="banner-bg"></div>
+      <div class="banner-content">
+        <h1>AUDITION</h1>
+        <p class="banner-title">
+          아티스트 매니지먼트 새라온 엔터테인먼트에서<br />
+          재능있는 신인을 찾습니다.
+        </p>
+      </div>
+    </div>
+
+    <section class="audition-wrap mg-t">
+      <div class="center">
+        <table>
+          <tr>
+            <th>모집분야</th>
+            <th>모집기간</th>
+            <th>접수방법</th>
+          </tr>
+          <tr>
+            <td>가수</td>
+            <td>2021.11.04 ~ 2021.11.24</td>
+            <td>
+              프로필사진(전신, 상반신, 클로즈업 사진 포함 5장 이상),
+              자기소개서<br />
+              본인이 선택한 노래를 자유롭게 해석한 녹음 파일 이메일 접수
+              (music@ipxhop.com)
+            </td>
+          </tr>
+          <tr>
+            <td>배우</td>
+            <td>2021.11.04 ~ 2021.11.24</td>
+            <td>
+              프로필사진(전신, 상반신, 클로즈업 사진 포함 5장 이상),
+              자기소개서<br />
+              본인의 연기 영상을 첨부한 이메일 접수 (music@ipxhop.com)
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td>
+              <ul class="audition-notice">
+                <li>
+                  메일 제목에 [오디션 지원]이라는 말머리를 반드시 달아서
+                  보내주세요.
+                </li>
+                <li>
+                  접수된 사진과 자료는 반환되지 않으며, 서류합격자에 한해 개별
+                  연락을 드립니다.
+                </li>
+                <li>
+                  캠이나 포토샵으로 외모를 변형한 사진은 심사에 반영되지
+                  않습니다.
+                </li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+
+        <a
+          class="download-btn"
+          href="/download/새라온 오디션 지원서.docx"
+          download
+          >양식 다운로드</a
+        >
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-center">
+        <div class="footer-content-left">
+          <h1 class="footer-logo">
+            <a href="index.html"><img src="images/common/footerLogo.svg" alt="새라온이앤티 로고"></a>
+          </h1>
+    
+          <div class="copyright">
+            <p>Copyright 2021 새라온이앤티, All rights reserved.</p>
+            <p><a href="#void">[개인정보취급방침]</a></p>
+          </div>
+        </div>
+    
+        <div class="footer-content-right">
+          <div class="tel-info">
+            <p>SAERAON OFFICE</p>
+            <p>T: 02-6975-9905</p>
+            <p>F: 070-7008-9999</p>
+          </div>
+    
+          <address>
+            <p>서울시 강남구 언주로 536 태승빌딩 5F</p>
+            <p>Taeseoung Bldg, Eonji-ro, Gangnam-gu, Seoul, KR</p>
+          </address>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

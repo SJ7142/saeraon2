@@ -1,0 +1,104 @@
+.title-banner-wrap {
+  background-image: url(../images/audition/audition-bg.svg);
+}
+
+/* audition-wrap */
+table {
+  text-align: center;
+  width: 100%;
+}
+tr:first-child {
+  border-bottom: 2px solid var(--color-dark);
+}
+tr {
+  border-bottom: 1px solid var(--color-light);
+}
+tr:last-child {
+  border-bottom: 0;
+}
+tr > th {
+  font-size: var(--font-body2);
+  font-weight: var(--weight-body2);
+  letter-spacing: var(--ls-body2);
+  color: var(--color-main);
+  height: 60px;
+}
+th:first-of-type {
+  width: 15%;
+}
+th:last-of-type {
+  width: 60%;
+}
+tr > td {
+  height: 120px;
+  font-size: var(--font-body3);
+  font-weight: var(--weight-body4);
+  letter-spacing: var(--ls-body3);
+}
+tr > td:last-of-type {
+  text-align: left;
+}
+.audition-notice > li {
+  list-style-type: disc;
+  margin: 10px 0;
+  font-size: var(--font-body4);
+  font-weight: var(--weight-body4);
+  letter-spacing: var(--ls-body4);
+  color: var(--color-light-gray);
+}
+.download-btn {
+  display: block;
+  text-align: center;
+  margin: 100px auto 0 auto !important;
+  width: 350px;
+  padding: 18px 40px;
+  margin-top: 30px;
+  color: var(--color-main);
+  font-size: var(--font-body1);
+  font-weight: var(--weight-body1);
+  letter-spacing: var(--ls-body1);
+  border: 1px solid var(--color-main);
+  border-radius: 5px;
+  box-shadow: inset 0 0 0 0 var(--color-main);
+  -webkit-transition: ease-out 0.5s;
+  -moz-transition: ease-out 0.5s;
+  transition: ease-out 0.5s;
+}
+.download-btn:hover {
+  box-shadow: inset 0 100px 0 0 var(--color-main);
+  color: var(--color-white);
+}
+
+/* media qr */
+@media screen and (max-width: 1450px) {
+  .center {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 1023px) {
+  tr > th {
+    font-size: var(--font-body4);
+    font-weight: var(--weight-body4);
+    letter-spacing: var(--ls-body4);
+  }
+  tr > td {
+    height: 120px;
+    font-size: var(--font-body5);
+    font-weight: var(--weight-body5);
+    letter-spacing: var(--ls-body5);
+  }
+}
+@media screen and (max-width: 767px) {
+  .download-btn {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: var(--font-body3);
+    font-weight: var(--weight-body3);
+    letter-spacing: var(--ls-body3);
+  }
+  .audition-notice > li {
+    font-size: var(--font-body5);
+    font-weight: var(--weight-body5);
+    letter-spacing: var(--ls-body5);
+  }
+}
